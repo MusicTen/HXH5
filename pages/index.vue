@@ -35,7 +35,7 @@
 		methods: {
 			goLogin () {
 				uni.navigateTo({
-					url: '/pages/login'
+					url: '/pages/register'
 				});
 			},
 			click (data) {
