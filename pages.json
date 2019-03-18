@@ -1,11 +1,21 @@
 {
 	"pages": [ // pages数组中第一项表示应用启动页
 		{
-			"path": "pages/shophome"
+			"path": "pages/shophome",
+			"style": {
+				"navigationStyle":"custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
 		}, {
-			"path": "pages/index"
-		}, {
-			"path": "pages/list2detail-list"
+			"path": "pages/list2detail-list",
+			"style": {
+				"navigationStyle":"custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
 		}, {
 			"path": "pages/list2detail-detail"
 		}, {
@@ -13,20 +23,66 @@
 		}, {
 			"path": "pages/register"
 		}, {
-			"path": "pages/order"
+			"path": "pages/order",
+			"style": {
+				"navigationStyle":"custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
 		}, {
-			"path": "pages/center"
+			"path": "pages/center",
+			"style": {
+				"navigationStyle":"custom",
+				"app-plus":{
+					"titleView":false
+				}
+			}
 		}, {
 			"path": "pages/search"
 		}, {
 			"path": "pages/feedback"
+		},{
+            "path" : "pages/calendar"
+        },{
+            "path" : "pages/hotpic-list"
+        },{
+		    "path" : "pages/hotpic-detail"
+		},{
+		    "path" : "pages/phones"
+		},{
+		    "path" : "pages/phone-search"
+		},{
+		    "path" : "pages/wechat",
+			"style": {
+				// "navigationStyle":"custom",
+			    "navigationBarTitleText" : "发现",
+				"enablePullDownRefresh" : true,
+			    "app-plus" : { // 设置编译到 App平台的特定样式
+			        "bounce" : "none",
+			        "titleNView" : {
+			            "type" : "transparent",
+			            "buttons" : [
+			                {
+			                    "background" : "rgba(255,255,255,0.2)",
+			                    "color" : "#696969",
+			                    "type" : "none",
+			                    "fontSrc" : "./static/fonts/iconfont.ttf",
+			                    "text" : "\ue608" //小相机
+			                }
+			            ]
+			        }
+			    }
+			}
+		},{
+		    "path" : "pages/publish"
 		}
-	],
+    ],
 		"globalStyle": {
-		"navigationStyle": "custom", // 隐藏顶部导航栏
-		"navigationBarTextStyle": "black",
+		// "navigationStyle": "custom", // 隐藏顶部导航栏
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#ff6364",
 		"backgroundColor": "#F8F8F8"
 	},
 	"tabBar": {
@@ -43,17 +99,17 @@
 			"pagePath": "pages/list2detail-list",
 			"iconPath": "static/footer/footer-msg.png",
 			"selectedIconPath": "static/footer/footer-msg-act.png",
-			"text": "消息"
+			"text": "新闻"
 		}, {
-			"pagePath": "pages/order",
+			"pagePath": "pages/wechat",
 			"iconPath": "static/footer/footer-appeal.png",
 			"selectedIconPath": "static/footer/footer-appeal-act.png",
-			"text": "订单"
+			"text": "朋友圈"
 		}, {
-			"pagePath": "pages/login",
+			"pagePath": "pages/phones",
 			"iconPath": "static/footer/footer-task.png",
 			"selectedIconPath": "static/footer/footer-task-act.png",
-			"text": "商品"
+			"text": "地域"
 		}, {
 			"pagePath": "pages/center",
 			"iconPath": "static/footer/footer-member.png",

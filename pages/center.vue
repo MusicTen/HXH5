@@ -1,6 +1,5 @@
 <template>
 	<view>
-		<Header></Header>
 		<view class="header" v-bind:class="{'status':isH5Plus}">
 			<view class="userinfo">
 				<view class="face"><image :src="userinfo.face"></image></view>
@@ -9,7 +8,7 @@
 					<view class="integral">积分:{{userinfo.integral}}</view>
 				</view>
 			</view>
-			<view class="setting"><image src="../static/center/setting.png"></image></view>
+			<view class="setting" @click="setting"><image src="../static/center/setting.png"></image></view>
 		</view>
 		<view class="orders">
 			<view class="box">
@@ -40,12 +39,11 @@
 	</view>
 </template>
 <script>
-	import Header from '@/components/header.vue'
 	import uniGrid from '@/components/uni-grid.vue'
 	// import {uniGrid} from '@dcloudio/uni-ui'
 	// import uniGrid from '@dcloudio/uni-ui/lib/uni-grid/uni-grid.vue'
 	export default {
-		components: {uniGrid, Header},
+		components: {uniGrid},
 		data() {
 			return {
 				//#ifdef APP-PLUS
@@ -65,7 +63,7 @@
 				],
 				severList:[
 					[
-						{name:'我的收藏',icon:'point.png'},
+						{name:'我的图片',icon:'point.png'},
 						{name:'优惠券',icon:'quan.png'},
 						{name:'红包',icon:'momey.png'},
 						{name:'任务',icon:'renw.png'},
@@ -101,11 +99,24 @@
 			//用户点击列表项
 			toPage(list_i,li_i){
 				uni.showToast({title: this.severList[list_i][li_i].name});
-				if (list_i === 1 && li_i === 1) {
+				if (list_i === 0 && li_i === 0) {
+					uni.navigateTo({
+						url: '/pages/hotpic-list'
+					})
+				} else if (list_i === 1 && li_i === 3) {
+					uni.navigateTo({
+						url: '/pages/calendar'
+					})
+				} else if (list_i === 1 && li_i === 1) {
 					uni.navigateTo({
 						url: '/pages/feedback'
 					})
 				}
+			},
+			setting () {
+				uni.navigateTo({
+					url: '/pages/login'
+				})
 			}
 		}
 	}

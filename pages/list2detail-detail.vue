@@ -92,8 +92,9 @@
         font-size: 32upx;
         font-weight: 400;
         line-height: 42upx;
-        color: white;
+        color: #EFEFF4;
         z-index: 11;
+		text-shadow: 2upx 2upx 2upx #666;
     }
 
     .article-meta {

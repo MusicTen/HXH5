@@ -1,11 +1,9 @@
 @charset "UTF-8";
-/* Simple Pro 简
- * Author 芥末
- * 2018-09-27
- */
+
 /* 全局变量  */
 .s-page-wrapper {
-  max-width: 750rpx; }
+  max-width: 750rpx; 
+	}
 
 /* 含有阴影 */
 .has-shadow {

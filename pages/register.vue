@@ -1,42 +1,39 @@
 <template>
-	<view class="s-page-wrapper is-80vh">
-		<Header></Header>
-		<view class="is-30vh has-mgtb-40">
-			<view class="is-flex is-column is-justify-center  is-align-center is-height-100">
+	<view>
+		<view class="headimg">
+			<view>
 				<image src="../static/common/logo.jpg" mode="aspectFit" class="logoimg"></image>
 			</view>
 		</view>
-		<view class="registercontent">
-			<view class="has-mglr-10 ">
-				<view class=" has-mgtb-10 ">
+		<view class="content">
+			<view class="item">
+				<view>
 					<input type="number" maxlength="11" placeholder="请输入手机号" class="is-input1 " />
 				</view>
-				<view class=" has-mgtb-10 ">
+				<view>
 					<input type="number" maxlength="6" placeholder="短信验证码" class="is-input1 " />
 					<view class="codeimg" @tap="getsmscode">{{smsbtn.text}}</view>
 				</view>
 
-				<view class=" has-radius has-mgtb-10">
+				<view>
 					<input placeholder="请输入登录密码" :password="true" class="is-input1" />
 
 				</view>
-				<view class=" registerbtn has-radius has-mgtb-20">
+				<view class="registerbtn">
 					<button>注 册</button>
 				</view>
 			</view>
 		</view>
-		<view class="is-20vh has-mgt-80">
-			<navigator url="#" class=" has-radius is-center is-grey " hover-class="">
-				<text>注册即表示同意</text><text class="is-blue">《用户协议》</text>
+		<view class="tips">
+			<navigator url="#" hover-class="">
+				<text>注册即表示同意</text><text class="blue">《用户协议》</text>
 			</navigator>
 		</view>
 	</view>
 </template>
 
 <script>
-	import Header from '@/components/header.vue'
 	export default {
-		components: {Header},
 		data() {
 			return {
 				smsbtn: {
@@ -44,7 +41,7 @@
 					status: false,
 					codeTime: 60
 				},
-				timerId: null,
+				timerId: null
 			};
 		},
 		methods: {
@@ -64,27 +61,31 @@
 					1000);
 				return false;
 			}
-
 		}
 	}
 </script>
 
 <style>
-	page {
-		min-height: 100%;
-		background-color: #FFFFFF;
+	.headimg {
+		padding: 120rpx 0 20rpx;
 	}
-
-	.registercontent {
-		width: 85%;
-		margin: 0 auto;
+	.headimg > view {
+		text-align: center;
 	}
-
 	.logoimg {
 		width: 200rpx;
 		height: 200rpx;
 		border-radius: 50%;
+		
 	}
+	.content {
+		width: 85%;
+		margin: 0 auto;
+	}
+	.item>view {
+		margin-top: 20rpx;
+	}
+
 
 	.is-input1 {
 		height: 88rpx;
@@ -151,11 +152,19 @@
 		display: block;
 		margin: 0;
 		font-family: inherit;
-		background: #f35;
+		background: #ff6364;
 		opacity: 0.8;
 	}
 
 	button:after {
 		border: 2rpx solid #f2f2f2;
+	}
+	.tips {
+		text-align: center;
+		margin-top: 20rpx;
+		font-size: 32rpx;
+	}
+	.blue {
+		color: blue;
 	}
 </style>

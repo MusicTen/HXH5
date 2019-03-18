@@ -19,19 +19,37 @@
                 </view>
             </view>
         </view>
+		<flixedadd :backgroundColor="backgroundColor" :selectbackgroundColor="selectbackgroundColor" :color="color" :selectcolor="selectcolor" :addlistdata="addlistdata" @addlisttap="addlisttap"></flixedadd>
     </view>
 </template>
 
 <script>
     var dateUtils = require('../static/js/util.js').dateUtils;
-
+	import flixedadd from "../components/flixedadd.vue"
     export default {
+		components:{
+			flixedadd
+		},
         data() {
             return {
                 banner: {},
                 listData: [],
                 last_id: "",
-                reload: false
+                reload: false,
+				backgroundColor:"#228B22",
+				selectbackgroundColor:"#FFB233",
+				color:"#FFB233",
+				selectcolor:"#228B22",
+				addlistdata:[
+					{
+						title:"第一个",
+						src:"/static/logo.png"
+					},
+					{
+						title:"第二个",
+						src:"/static/qq.png"
+					}
+				]
             }
         },
         onLoad() {
@@ -121,8 +139,14 @@
                     });
                 });
                 return newItems;
-            }
-        },
+            },
+			addlisttap:function(index){ /*第一个序列为0,第二个为1,以此类推;当值为-1代表点击的是遮慕层*/
+				uni.showToast({
+					title: "点击的序列为"+index,
+					duration: 1000
+				});
+			}
+        }
     }
 </script>
 
@@ -148,7 +172,7 @@
         font-size: 32upx;
         font-weight: 400;
         line-height: 42upx;
-        color: white;
+        color: #F1F1F1;
         z-index: 11;
     }
 

@@ -267,7 +267,7 @@ page {
 .header {
 	width: 100%;
 	height: 100upx;
-	background-color: #ff570a;
+	background-color: #ff6364;
 	display: flex;
 	position: fixed;
 	top: 0;
@@ -331,7 +331,7 @@ page {
 	/*  #ifdef  APP-PLUS  */
 	margin-top: var(--status-bar-height);
 	/*  #endif  */
-	background-color: #ff570a;
+	background-color: #ff6364;
 	height: 100upx;
 }
 .swiper-view {
@@ -347,7 +347,7 @@ page {
 		width: 100%;
 		height: 30upx;
 		border-radius: 100% 100% 0 0;
-		background-color: #ff570a;
+		background-color: #ff6364;
 		margin-top: -15upx;
 		position: absolute;
 	}
@@ -355,7 +355,7 @@ page {
 .category {
 	width: 95%;
 	padding: 2.5vw 2.5vw;
-	background-color: #ff570a;
+	background-color: #ff6364;
 	.box {
 		width: 100%;
 		border-radius: 20upx;
@@ -370,7 +370,7 @@ page {
 				height: 5upx;
 				background-color: rgba(0, 0, 0, 0.2);
 				&.active {
-					background-color: #ff570a;
+					background-color: #ff6364;
 				}
 			}
 		}
@@ -411,7 +411,7 @@ page {
 .pick{
 	width: 95%;
 	padding: 0 2.5vw 2.5vw 2.5vw;
-	background: linear-gradient(to bottom, #ff570a 0%,#ffffff 105%);
+	background: linear-gradient(to bottom, #ff6364 0%,#ffffff 105%);
 	.box{
 		width: 100%;
 		border-radius: 20upx;

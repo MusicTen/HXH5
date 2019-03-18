@@ -65,16 +65,23 @@
             }
         },
         onLoad() {
-            let deviceInfo = {
-                appid: plus.runtime.appid,
-                imei: plus.device.imei, //设备标识
-                p: plus.os.name === "Android" ? "a" : "i", //平台类型，i表示iOS平台，a表示Android平台。
-                md: plus.device.model, //设备型号
-                app_version: plus.runtime.version,
-                plus_version: plus.runtime.innerVersion, //基座版本号
-                os: plus.os.version,
-                net: "" + plus.networkinfo.getCurrentType()
-            }
+			try {
+				const res = uni.getSystemInfoSync();
+				console.log(res);
+			} catch (e) {
+				// error
+			}
+//             let deviceInfo = {
+//                 appid: plus.runtime.appid,
+//                 imei: plus.device.imei, //设备标识
+//                 p: plus.os.name === "Android" ? "a" : "i", //平台类型，i表示iOS平台，a表示Android平台。
+//                 md: plus.device.model, //设备型号
+//                 app_version: plus.runtime.version,
+//                 plus_version: plus.runtime.innerVersion, //基座版本号
+//                 os: plus.os.version,
+//                 net: "" + plus.networkinfo.getCurrentType()
+//             }
+			let deviceInfo = {}
             this.sendDate = Object.assign(deviceInfo, this.sendDate);
         },
         methods: {
@@ -305,7 +312,7 @@
     	content: '\e438';
     }
     .feedback-submit {
-    	background: #007AFF;
+    	background: #ff6364;
     	color: #FFFFFF;
     	margin: 20upx;
     }
