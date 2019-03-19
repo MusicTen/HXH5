@@ -43,11 +43,11 @@
 				addlistdata:[
 					{
 						title:"第一个",
-						src:"/static/logo.png"
+						src:"/static/common/uniapp.png"
 					},
 					{
 						title:"第二个",
-						src:"/static/qq.png"
+						src:"/static/common/weixin.png"
 					}
 				]
             }

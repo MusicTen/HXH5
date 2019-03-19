@@ -87,7 +87,7 @@
 			init() {
 				//用户信息
 				this.userinfo={
-					face: '../static/face.jpg',
+					face: '../static/common/face.jpg',
 					username: 'VIP会员0704',
 					integral: '2019'
 				}		
