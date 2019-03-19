@@ -36,10 +36,10 @@
                 listData: [],
                 last_id: "",
                 reload: false,
-				backgroundColor:"#228B22",
-				selectbackgroundColor:"#FFB233",
-				color:"#FFB233",
-				selectcolor:"#228B22",
+				backgroundColor: "#ff6364",
+				selectbackgroundColor: "#FFF",
+				color: "#FFF",
+				selectcolor: "#ff6364",
 				addlistdata:[
 					{
 						title:"第一个",
@@ -275,7 +275,7 @@
     }
 
     .uni-media-list-logo {
-        width: 180upx;
+        width: 220upx;
         height: 140upx;
         margin-right: 20upx;
     }

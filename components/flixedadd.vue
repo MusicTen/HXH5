@@ -31,11 +31,11 @@
 			},
 			selectbackgroundColor:{ /*选中的加号背景颜色*/
 				type:String,
-				default:"#FFFFFF"
+				default:"#FFF"
 			},
 			color:{ /*默认的字体颜色*/
 				type:String,
-				default:"#FFFFFF"
+				default:"#FFF"
 			},
 			selectcolor:{ /*选中的字体颜色*/
 				type:String,
