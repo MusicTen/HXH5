@@ -1,19 +1,18 @@
 <template>
 	<view class="shoppingcar" :style="minHeight">
-		<Header></Header>
 		<view class="dianpu" v-for="(item,index) in shopData" :key="index">
 			<view class="dianpu-name">
 				<checkBox :isselected="item.checked" @change="shopActive(item)"></checkBox>
-				<view class="iconfont">&#xe610;</view>
+				<view class="iconfont">&#xe635;</view>
 				<view class="text">{{ item.shop_name }}</view>
 			</view>
 			<scroll-view scroll-x="true" class="scrollView" 
-			v-for="(ite,ind) in item.data"
-			:key="ind"
-			:id="ite.pro_id"
-			:scroll-left="ite.scrollLeft" 
-			@touchstart="touchS"
-			@touchend="touchE">
+				v-for="(ite,ind) in item.data"
+				:key="ind"
+				:id="ite.pro_id"
+				:scroll-left="ite.scrollLeft" 
+				@touchstart="touchS"
+				@touchend="touchE">
 				<view class="viewbox">
 					<view class="shangpin" >
 						<checkBox :isselected="ite.isChecked" @change="proActive(item,ite)"></checkBox>
@@ -33,9 +32,9 @@
 									<text class="shuliang">x {{ ite.pro_count }}</text>
 								</view>
 								<view class="numInput">
-									<text class="reduce iconfont" @tap="changeCount(ite,-1)" :class="ite.pro_count == 0 ? 'numbox-disabled' : ''">&#xe608;</text>
+									<text class="reduce iconfont" @tap="changeCount(ite,-1)" :class="ite.pro_count == 0 ? 'numbox-disabled' : ''">&#xe601;</text>
 									<input type="number" v-model="ite.pro_count" />
-									<text class="plus iconfont" @tap="changeCount(ite,1)">&#xe60a;</text>
+									<text class="plus iconfont" @tap="changeCount(ite,1)">&#xe602;</text>
 								</view>
 							</view>
 						</view>
@@ -67,12 +66,10 @@
 </template>
 
 <script>
-	import Header from '@/components/header.vue'
 	import checkBox from '@/components/custom-checkbox.vue'
 	var startX=0;
 	var endX=0;
 export default {
-	components: {Header},
 	data() {
 		return {
 			// 全选，返回
@@ -167,11 +164,8 @@ export default {
 		// 单击结算
 		jiesuan(){
 			console.log('跳转到支付详情页面');
-			uni.navigateTo({
-				url: '/pages/my/zhifu',
-				success: res => {},
-				fail: () => {},
-				complete: () => {}
+			uni.switchTab({
+				url: '/pages/center'
 			});
 		},
 		// 点击选中与取消===店铺,(选中店铺的所有商品)
@@ -279,6 +273,22 @@ export default {
 </script>
 
 <style lang="scss">
+	@font-face {
+		font-family: 'iconfont';  /* project id 1096241 */
+		src: url('//at.alicdn.com/t/font_1096241_03iagh48h95q.eot');
+		src: url('//at.alicdn.com/t/font_1096241_03iagh48h95q.eot?#iefix') format('embedded-opentype'),
+		url('//at.alicdn.com/t/font_1096241_03iagh48h95q.woff2') format('woff2'),
+		url('//at.alicdn.com/t/font_1096241_03iagh48h95q.woff') format('woff'),
+		url('//at.alicdn.com/t/font_1096241_03iagh48h95q.ttf') format('truetype'),
+		url('//at.alicdn.com/t/font_1096241_03iagh48h95q.svg#iconfont') format('svg');
+	}
+	.iconfont{
+		font-family: "iconfont" !important;
+		font-size: 16px;font-style:normal;
+		-webkit-font-smoothing: antialiased;
+		-webkit-text-stroke-width: 0.2px;
+		-moz-osx-font-smoothing: grayscale;
+	}
 	.numInput {
 		overflow: hidden;
 		float: right;
@@ -451,8 +461,8 @@ export default {
 	.allSelectText > view:first-child {
 		display: inline-block;
 		float: left;
-	} 
-	.scrollView{
+	}
+	.scrollView {
 		width: 750upx;
 	}
 	.scrollView .viewbox{

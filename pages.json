@@ -23,13 +23,7 @@
 		}, {
 			"path": "pages/register"
 		}, {
-			"path": "pages/order",
-			"style": {
-				"navigationStyle":"custom",
-				"app-plus":{
-					"titleView":false
-				}
-			}
+			"path": "pages/order"
 		}, {
 			"path": "pages/center",
 			"style": {

@@ -95,6 +95,13 @@
 			//用户点击订单类型
 			toOrderType(index){
 				uni.showToast({title: this.orderTypeLise[index].name});
+				switch (index) {
+					case 4:
+					uni.navigateTo({
+						url: '/pages/order'
+					})
+					break;
+				}
 			},
 			//用户点击列表项
 			toPage(list_i,li_i){
