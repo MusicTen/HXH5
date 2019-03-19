@@ -108,7 +108,7 @@
 		border-radius: 15upx;
 	}
 	.footer-right .send-comment{
-		background-color: #007AFF;
+		background-color: #ff6364;
 		text-align: center;
 		line-height: 60upx;
 		color: #FFFFFF;

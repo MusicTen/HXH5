@@ -63,17 +63,17 @@
 			return {
 				posts: postData, // 模拟数据
 				user_id: 4,
-				username: 'Liuxy',
+				username: 'LSO',
 				index: '',
 				comment_index: '',
-				input_placeholder: '评论', //占位内容
-				focus: false, //是否自动聚焦输入框
-				is_reply: false, //回复还是评论
-				showInput: false, //评论输入框
-				screenHeight: '', //屏幕高度(系统)
+				input_placeholder: '评论', // 占位内容
+				focus: false, // 是否自动聚焦输入框
+				is_reply: false, // 回复还是评论
+				showInput: false, // 评论输入框
+				screenHeight: '', // 屏幕高度(系统)
 				platform: '',
-				windowHeight: '' , //可用窗口高度(不计入软键盘)
-				loadMoreText: "加载中...",
+				windowHeight: '' , // 可用窗口高度(不计入软键盘)
+				loadMoreText: '加载中...',
 				showLoadMore: false,
 			}
 		},
@@ -114,30 +114,30 @@
 		onUnload() {
 			this.max = 0,
 			this.data = [],
-			this.loadMoreText = "加载更多",
+			this.loadMoreText = '加载更多',
 			this.showLoadMore = false;
 		},
 		onReachBottom() { // 监听上拉触底事件
 			console.log('onReachBottom');
 			this.showLoadMore = true;
 			setTimeout(() => {
-				//获取数据
-				if (this.posts.length < 20){//测试数据
+				// 获取数据
+				if (this.posts.length < 20){ // 测试数据
 					this.posts = this.posts.concat(this.posts);
 				} else {
-					this.loadMoreText = "暂无更多";
+					this.loadMoreText = '暂无更多';
 				}
 			}, 1000);
 		},
-		onPullDownRefresh() { //监听下拉刷新动作
+		onPullDownRefresh() { // 监听下拉刷新动作
 			console.log('onPullDownRefresh');
 			// 这里获取数据
 			setTimeout(function() {
 				//初始化数据
-				uni.stopPullDownRefresh(); //停止下拉刷新
+				uni.stopPullDownRefresh(); // 停止下拉刷新
 			}, 1000);
 		},
-		onNavigationBarButtonTap(e) {//监听标题栏点击事件
+		onNavigationBarButtonTap(e) { // 监听标题栏点击事件
 			if (e.index == 0) {
 				this.navigateTo('./publish')
 			}
@@ -173,7 +173,7 @@
 				this.focus = true;
 				this.index = index;
 			},
-			adjust() { //当弹出软键盘发生评论动作时,调整页面位置pageScrollTo
+			adjust() { // 当弹出软键盘发生评论动作时,调整页面位置pageScrollTo
 				return;
 				uni.createSelectorQuery().selectViewport().scrollOffset(res => {
 					var scrollTop = res.scrollTop;
@@ -194,12 +194,12 @@
 				}).exec();
 			},
 			reply(index, comment_index) {
-				this.is_reply = true; //回复中
-				this.showInput = true; //调起input框
+				this.is_reply = true; // 回复中
+				this.showInput = true; // 调起input框
 				let replyTo = this.posts[index].comments.comment[comment_index].username;
 				this.input_placeholder = '回复' + replyTo;
-				this.index = index; //post索引
-				this.comment_index = comment_index; //评论索引
+				this.index = index; // post索引
+				this.comment_index = comment_index; // 评论索引
 				this.focus = true;
 			},
 			blur: function() {

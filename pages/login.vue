@@ -13,7 +13,6 @@
 				<view>
 					<input class="is-input1" v-model="login.password" placeholder="请输入登录密码"  @input="BindInput" data-val="password"/>
 				</view>
-
 				<view class="loginbtn">
 					<button :loading="login.loading" @tap="defaultHandlerLogin"> {{ login.loading ? "登录中...":"登 录"}} </button>
 				</view>
@@ -63,7 +62,7 @@
 </script>
 <style>
 	.headimg {
-		padding: 208rpx 0 20rpx;
+		padding: 120rpx 0 20rpx;
 	}
 	.headimg > view {
 		text-align: center;

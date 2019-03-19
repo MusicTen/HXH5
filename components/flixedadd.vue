@@ -3,13 +3,10 @@
 		<view v-if="camouflage_flag" class="camouflage" @tap="addlisttap(-1)"></view>
 		<view @tap="addtap()" :animation="animationadd" class="add" :style="{backgroundColor:backgroundColor,color:color}">+</view>
 		<view v-if="add_list_flag" :animation="animationaddlist" class="add_list">
-			
-			
 			<view v-for="(listvalue, index) in addlistdata" :key="index" class="add_list_item" @tap="addlisttap(index)">
 				<text>{{listvalue.title}}</text>
 				<image :src="listvalue.src"></image>
 			</view>
-			
 		</view>
 	</view>
 </template>
@@ -30,7 +27,7 @@
 		props:{
 			backgroundColor:{ /*默认加号背景色*/
 				type:String,
-				default:"#1296db"
+				default:"#ff6364"
 			},
 			selectbackgroundColor:{ /*选中的加号背景颜色*/
 				type:String,
@@ -42,7 +39,7 @@
 			},
 			selectcolor:{ /*选中的字体颜色*/
 				type:String,
-				default:"#1296db"
+				default:"#ff6364"
 			},
 			addlistdata:{ /*传入数据格式:[{"title":"内容1","src":"图片的绝对路径或网址路径（不可是相对路径）"},{"title":"内容2","src":"图片的绝对路径或网址路径"}]*/
 				type:Array,

@@ -87,9 +87,9 @@
 			init() {
 				//用户信息
 				this.userinfo={
-					face:'../static/center/face.jpeg',
-					username:"VIP会员10240",
-					integral:"1435"
+					face: '../static/face.jpg',
+					username: 'VIP会员0704',
+					integral: '2019'
 				}		
 			},
 			//用户点击订单类型

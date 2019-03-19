@@ -2,7 +2,7 @@
     "name" : "uniapp-demo",
     "appid" : "__UNI__4C0492C",
     "description" : "购物+新闻+朋友圈",
-    "versionName" : "1.1.1",
+    "versionName" : "1.1.2",
     "versionCode" : "100",
     "transformPx" : false,
     "app-plus" : {
@@ -54,9 +54,11 @@
     /* 快应用特有相关 */
     "mp-weixin" : {
         /* 小程序特有相关 */
-        "appid" : "",
+        "appid" : "wxf76eaa552b4368ac",
         "setting" : {
-            "urlCheck" : true
+            "urlCheck" : false,
+            "postcss" : true,
+            "minified" : true
         }
     }
 }

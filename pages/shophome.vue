@@ -12,7 +12,7 @@
 				<input placeholder="睫毛膏" @tap="toSearch()" />
 			</view>
 			<view class="menu">
-				<image mode="widthFix" src="../static/shophome/face.png"></image>
+				<image mode="widthFix" src="../static/face.jpg"></image>
 			</view>
 		</view>
 		<!-- 占位 -->

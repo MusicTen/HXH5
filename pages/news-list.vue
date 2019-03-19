@@ -110,9 +110,9 @@
                 })
             },
             goDetail: function(e) {
-                // 				if (!/前|刚刚/.test(e.published_at)) {
-                // 					e.published_at = dateUtils.format(e.published_at);
-                // 				}
+// 				if (!/前|刚刚/.test(e.published_at)) {
+// 					e.published_at = dateUtils.format(e.published_at);
+// 				}
                 let detail = {
                     author_name: e.author_name,
                     cover: e.cover,
@@ -122,7 +122,7 @@
                     title: e.title
                 }
                 uni.navigateTo({
-                    url: "./list2detail-detail?detailDate=" + encodeURIComponent(JSON.stringify(
+                    url: "./news-detail?detailDate=" + encodeURIComponent(JSON.stringify(
                         detail))
                 })
             },
