@@ -274,13 +274,8 @@ export default {
 
 <style lang="scss">
 	@font-face {
-		font-family: 'iconfont';  /* project id 1096241 */
-		src: url('//at.alicdn.com/t/font_1096241_03iagh48h95q.eot');
-		src: url('//at.alicdn.com/t/font_1096241_03iagh48h95q.eot?#iefix') format('embedded-opentype'),
-		url('//at.alicdn.com/t/font_1096241_03iagh48h95q.woff2') format('woff2'),
-		url('//at.alicdn.com/t/font_1096241_03iagh48h95q.woff') format('woff'),
-		url('//at.alicdn.com/t/font_1096241_03iagh48h95q.ttf') format('truetype'),
-		url('//at.alicdn.com/t/font_1096241_03iagh48h95q.svg#iconfont') format('svg');
+		font-family: 'iconfont';
+		src: '../static/fonts/iconfont.ttf'
 	}
 	.iconfont{
 		font-family: "iconfont" !important;

@@ -68,7 +68,7 @@
 			                    "color" : "#696969",
 			                    "type" : "none",
 			                    "fontSrc" : "./static/fonts/iconfont.ttf",
-			                    "text" : "\ue608" //小相机
+			                    "text" : "&#xe689;" //小相机
 			                }
 			            ]
 			        }
